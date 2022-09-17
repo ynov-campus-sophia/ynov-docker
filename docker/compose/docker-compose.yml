@@ -1,0 +1,44 @@
+version: "3"
+services:
+  pg:
+    image: timescale/timescaledb-postgis:latest-pg13  
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/sql:/docker-entrypoint-initdb.d/
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: crypto-executor
+      POSTGRES_USER: executor
+      POSTGRES_PORT: 5432
+      
+  datacollect:
+    build:
+      context: ./datacollect-inov
+    image: asinatra/datacollect-inov
+    ports:
+      - 5000:5000
+    user: '1000'
+    depends_on:
+      - pg
+    volumes:
+      - ./logs/datacollect:/app/logs
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 8901:80
+    volumes:
+      - pgvol:/var/lib/pgadmin
+      - ./pgadmin/servers.json:/pgadmin4/servers.json
+    depends_on:
+      - pg
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=test@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=test1234
+  
+volumes:
+  pgvol:
+  pgdata:
+

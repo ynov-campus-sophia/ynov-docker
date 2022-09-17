@@ -33,58 +33,13 @@
 docker build . -t myimage -f docker/datacollect/Dockerfile
 ```
 
-# manual build via docker compose
+
+# PART2 docker compose
+
 
 ``` 
 docker-compose build
-```
-
-# manual deploy
-
-``` 
 docker-compose push
-```
-
-# run datacollect
-
-``` 
 docker-compose up -d
-```
-
-# stop datacollect
-
-``` 
 docker-compose down --remove-orphans
-```
-
-# PART2 CI/CD
-
-- Terminology: build, package manager, deploy, package, release, deploy environments, QA, Agile, Sprint Planning
-
-- Topology of IT ecosystem
-- INFRASTRUCTURE, SRE, Devops, Dev, Project Management
-- KPIs to improve productivity
-
-- orchestration
-- CLOUD PROVIDERS
-
-- GITOPS philosophy Argocd / FluxCD
-
-- continuous deployment
-- continuous delivery
-- continuous integration
-
-- package, test, deploy, monitoring
-
-# PART3 K8s
-
-- Local dev setup (minikube / microk8s)
-- deployment / svc / ingress
-
-# PART4 cloud
-
-- digitalocean :
-
-```
-kubectl expose deployment hello-world-deployment --type=LoadBalancer --port=80 --target-port=5000 -n inov
 ```

@@ -1,4 +1,4 @@
 FROM python
+ENV MY_VAR=test
 ADD . .
-RUN ls
 CMD python run.py

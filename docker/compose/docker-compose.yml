@@ -19,7 +19,7 @@ services:
     image: asinatra/datacollect-inov
     ports:
       - 5000:5000
-    user: '1000'
+    #user: '1000'
     depends_on:
       - pg
     volumes:

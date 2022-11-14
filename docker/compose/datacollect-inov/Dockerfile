@@ -21,4 +21,4 @@ ENV PIPENV_VENV_IN_PROJECT=1
 RUN pipenv install --system --deploy
 COPY src .
 
-CMD ["/usr/local/bin/python", "dummy-datacollect.py"]
+CMD ["/usr/local/bin/python", "datacollect.py"]

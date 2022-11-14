@@ -3,6 +3,7 @@ import krakenex
 from flask_sqlalchemy import SQLAlchemy
 import json
 import sys
+import os
 import pandas as pd
 from pykrakenapi import KrakenAPI
 api = krakenex.API()

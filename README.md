@@ -1,45 +1,8 @@
-# PART1 docker
+# CI / BUILD
 
-# prerequisites
-
-[docker](https://docs.docker.com/engine/install/ubuntu/)
-[docker-compose](https://docs.docker.com/compose/install/)
-
-# how to use volumes
-
-# how to use networks
-
-# sha vs tag
-
-# user id
-
-# 2 stages build
-
-# base SO Alpine vs ubuntu
-
-# ENTRYPOINT and CMD
-
-# docker registry and image inspect
-
-# BUILDKIT
-
-# deploy via github actions
-
-# docker basic commands / ps / logs / ls /inspect / exec / run
-
-# basic orchestration via depends_on
-
-```
-docker build . -t myimage -f docker/datacollect/Dockerfile
-```
+# orchestration / docker compose
 
 
-# PART2 docker compose
+# CD / deploy
+https://github.com/digitalocean/app_action/tree/v1.1.4
 
-
-``` 
-docker-compose build
-docker-compose push
-docker-compose up -d
-docker-compose down --remove-orphans
-```

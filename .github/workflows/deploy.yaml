@@ -53,7 +53,7 @@ jobs:
           app_name: hello-ynov
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
           images: '[{
-                "name": "asinatra-ynov-example",
+                "name": "asinatra-datacollect-ynov",
                 "image":{
                   "registry_type": "DOCKER_HUB",
                   "registry": "asinatra",
